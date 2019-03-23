@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+bool palindrome(string x);
+int main()
+{
+    string a;
+    cout << "请输入一个两位以上的数字： " << endl;
+    cin >> a;
+    if (palindrome(a))
+        cout << "true" << endl;
+    else
+        cout << "fales" << endl;
+}
+bool palindrome(string x)
+{
+    string t;
+    t = x;
+    reverse(x.begin(), x.end());
+    return (t == x);
+}
